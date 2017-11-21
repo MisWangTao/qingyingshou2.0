@@ -1,0 +1,457 @@
+html {
+	font-size: 20px;
+}
+@media only screen and (min-width:320px) {
+	html {
+	font-size: 20px !important;
+	}
+}
+@media only screen and (min-width:401px) {
+	html {
+	font-size: 21px !important;
+	}
+}
+@media only screen and (min-width:428px) {
+	html {
+	font-size: 26.75px !important;
+	}
+}
+@media only screen and (min-width:481px) {
+	html {
+	font-size: 30px !important;
+	}
+}
+@media only screen and (min-width:569px) {
+	html {
+	font-size: 35px !important;
+	}
+}
+@media only screen and (min-width:641px) {
+	html {
+	font-size: 40px !important;
+	}
+}
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 0.7rem;
+	font-family: "Microsoft YaHei",arial, "lucida console", sans-serif;
+	-webkit-tap-highlight-color: rgba(255,0,0,0);
+}
+p,h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	font-weight: normal;
+}
+$mainColor: #3891f9;
+$menuColor: #636363;
+$baiColor: #ffffff;
+$bgColor: #f3f6f9;
+$fontSize: 0.7rem;
+$borderStyle: 1px solid #d4dbec;
+$qianStyle: 1px solid #f3f5fa;
+$lanBorder: 1px solid #3891f9;
+$hColor: #272c31;
+$redColor: #f20000;
+$danlanColor: #c3defd;
+$bgOpcity: rgba(0,0,0,0.3);
+$chengColor: #fe5206;
+$huangColor: #fc8e00;
+$lvColor: #00db62;
+.active {
+	color: $mainColor;
+}
+body {
+	background: $bgColor;
+}
+a {
+	-webkit-tap-highlight-color: transparent;
+		  -webkit-touch-callout: none;
+			-webkit-user-select: none;
+}
+input,textarea,select {
+	outline: medium;
+	background: $baiColor;
+	border-radius: 1px;
+}
+button {
+	outline: medium;
+}
+input[type="text"],select,input[type="date"] {
+	height: 1rem;
+			appearance:none;
+		 -moz-appearance:none;
+	-webkit-appearance:none;
+}
+input[type="number"]{
+			appearance: textfield;
+		 -moz-appearance: textfield;
+	-webkit-appearance: textfield;
+}
+// input[type="date"]::-webkit-inner-spin-button {
+// 	visibility: hidden;
+// }
+input[type="checkbox"] {
+			appearance: normal;
+		 -moz-appearance: normal; /* Firefox */
+	-webkit-appearance: normal; /* Safari and Chrome */
+}
+textarea {
+	resize : none;
+}
+li {
+	list-style: none;
+}
+.container {
+	padding: 0 10px;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+	float: left;
+	box-sizing:border-box;
+}
+.col-xs-12 {
+	width: 100%;
+}
+.col-xs-11 {
+	width: 91.66666667%;
+}
+.col-xs-10 {
+	width: 83.33333333%;
+}
+.col-xs-9 {
+	width: 70%;
+}
+.col-xs-8 {
+	width: 66.66666667%;
+}
+.col-xs-7 {
+	width: 58.33333333%;
+}
+.col-xs-6 {
+	width: 45%;
+}
+.col-xs-5 {
+	width: 41.66666667%;
+}
+.col-xs-4 {
+	width: 33.33333333%;
+}
+.col-xs-3 {
+	width: 30%;
+}
+.col-xs-2 {
+	width: 16.66666667%;
+}
+.col-xs-1 {
+	width: 8.33333333%;
+}
+.col-xs-offset-1 {
+	margin-left: 8.33333333%;
+}
+.text-right {
+	text-align: right;
+}
+// 弹出框样式
+.zhezhao {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $bgOpcity;
+	z-index: 11;
+}
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $bgOpcity;
+	z-index: 11;
+	// display: none;
+	.modalInner {
+		margin: 35% auto 0;
+		width: 75%;
+		background: $baiColor;
+		border-radius: 1px;
+		overflow: hidden;
+		.modalHead {
+			background: $bgColor;
+			position: relative;
+			h4 {
+				text-align: center;
+				color: #555555;
+				font-size: 0.75rem;
+				line-height: 1.7rem;
+			}
+			i {
+				position: absolute;
+				top: 0.5rem;
+				right: 0.5rem;
+				font-size: 0.75rem;
+				color: $mainColor;
+			}
+		}
+		.modalBody {
+			padding: 0.5rem;
+			max-height: 280px;
+			overflow: auto;
+		}
+		.ipts {
+			text-align: center;
+			margin-top: 1.5rem;
+			input {
+				margin: 0 0.8rem;
+				padding: 0.2rem 1rem;
+			}
+			.ipt1 {
+				border: $borderStyle;
+
+			}
+			.ipt2 {
+				background: $mainColor;
+				color: $baiColor;
+				border: $lanBorder;
+			}
+		}
+	}
+
+}
+.btn{
+	width:80%;
+	margin: 1.4rem auto;
+	button {
+		display: block;
+		width: 100%;
+		height: 1.6rem;
+		text-align: center;
+		border-radius: 8px;
+		background-color:#1f8ae8;
+		color:#fff;
+		border: 0;
+		font-size:0.75rem;
+		letter-spacing: 5px;
+	}
+	p {
+		color: #5a6879;
+		text-align: center;
+		line-height: 2rem;
+	}
+}
+.contract,#contract,.newReceivable {
+	padding-bottom: 3rem;
+	font-size: 0.7rem;
+	background: #f5f5f5;
+	.container-fluid{
+		padding: 0;
+		margin-bottom: 0.5rem;
+		background: $baiColor;
+		overflow: hidden;
+		position: relative;
+		.container {
+			.row {
+				padding: 0.5rem 0;
+				overflow: hidden;
+				font-size: 0.7rem;
+				border-bottom: $qianStyle;
+				.col-xs-3 {
+					padding: 0 0 0 6px;
+					color: #97a8b3;
+					position: relative;
+					span {
+						position: absolute;
+						top: 0;
+						left: 0;
+						color: $redColor;
+					}
+				}
+				.col-xs-9 {
+					color: #222222;
+					position: relative;
+					input,textarea,select {
+						width: 90%;
+						border: 0;
+					}
+					i {
+						position: absolute;
+						right: 0;
+						top: 0.2rem;
+						font-size: 0.7rem;
+						color: #97a8be;
+					}
+					input[type="file"]{
+						position: relative;
+						width: 100%;
+						z-index: 22;
+						opacity: 0;
+					}
+					span {
+						color: $mainColor;
+					}
+					.red {
+						color: $redColor;
+					}
+					.file {
+						width: 90%;
+						.col-xs-4 {
+							padding: 0.3rem 0.5rem 0.3rem 0;
+							div {
+								position: relative;
+								width: 100%;
+								padding-bottom: 100%;
+								img {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+								}
+								i {
+									position: absolute;
+									top: -0.1rem;
+									right: -0.1rem;
+									font-size: 0.5rem;
+									color: $redColor;
+								}
+							}
+						}
+					}
+					.bizhong {
+                        position: absolute;
+                        top: 0;
+                        right: 0rem;
+                        padding: 0 0.1rem;
+                        font-size: 0.65rem;
+                        display: block;
+                        border: 1px solid #121213;
+                        color: #121213;
+                        background: #ffffff;
+                        z-index: 2;
+                    }
+
+				}
+				.switch {
+	                position: relative;
+	                input {
+	                    top: 0;
+	                    right: 0.5rem;
+	                    width: 60px;
+	                    height: 0.8rem;
+	                    position: absolute;
+	                    z-index: 12;
+	                    opacity: 0;
+	                }
+	                select {
+	                	width: 0.8rem;
+	                }
+	                img {
+	                    position: absolute;
+	                    top: 0;
+	                    right: 0.5rem;
+	                    z-index: 10;
+	                    width: 2rem;
+	                    
+	                }
+	            }
+				.genjinren {
+					p {
+						padding: 0;
+						margin-right: 0.5rem;
+						float: left;
+						span {
+						display: inline-block;
+						font-size: 0.65rem;
+						color: #121213;
+						}
+						span:nth-child(2) {
+						margin-left: 0.2rem;
+						color: $mainColor;
+						border: 1px solid $mainColor;
+						font-size: 0.55rem;
+						}
+					}
+				}
+				.hetong {
+		            span {
+		              display: block;
+		              float: left;
+		              padding: 2px 4px;
+		              margin-right: 0.5rem;
+		              font-size: 0.6rem;
+		              background: $danlanColor;
+		              color: #222222;
+		            }
+		        }
+					
+			}
+		}
+		// .container:last-child .row {
+		// 	border: 0;
+		// }
+	}
+	.badge {
+		margin-bottom: 0.5rem;
+		padding: 0 18px;
+		overflow: hidden;
+		.col-xs-5,.col-xs-7 {
+			span {
+				color: $mainColor;
+			}
+		}
+		.col-xs-7 {
+			text-align: right;
+		}
+	}
+}
+.detail {
+	.container-fluid {
+		margin: 0;
+		background: $baiColor;
+		p {
+			padding-top: 0.5rem;
+			padding-left: 0.8rem;
+			color: #333333;
+		}
+		.title {
+			padding: 0.5rem;
+			border-bottom: $qianStyle;
+			h4 {
+				display: inline-block;
+				padding-left: 6px;
+				font-weight: bold;
+				line-height: 0.75rem;
+				font-size: 0.75rem;
+				color: #121213;
+				border-left: 2px solid $mainColor;
+			}
+		}
+	}
+}
+.input-group {
+	margin: 1rem 0 0.8rem;
+	overflow: hidden;
+	text-align: center;
+	input[type="button"] {
+		margin: 0 1rem;
+		display: inline-block;
+		width: 4.5rem;
+		line-height: 1.4rem;
+		border-radius: 2px;
+	}
+	.ipt1 {
+		border: $lanBorder;
+		color: $mainColor;
+	}
+	.ipt2 {
+		border: $lanBorder;
+		background: $mainColor;
+		color: $baiColor;
+	}
+}
+
+
+
+
+
+
+	

@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title>轻应收专业版(开发)</title><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui"><meta name=screen-orientation content=portrait><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><script type=text/javascript src=https://g.alicdn.com/dingding/open-develop/1.5.1/dingtalk.js></script><script type=text/javascript>var _config
+
+        var xhr = new XMLHttpRequest()
+        xhr.open("GET","https://l.paiago.com/Api/user/isvConfig.php?url="+location.href, true)
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+        xhr.send()
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                if (xhr.status == 200) {
+
+                    _config = JSON.parse(xhr.responseText)
+                    
+                    dd.config({
+                        agentId: _config.agentId, // 必填，微应用ID
+                        corpId: _config.corpId,//必填，企业ID
+                        timeStamp: _config.timeStamp, // 必填，生成签名的时间戳
+                        nonceStr: _config.nonceStr, // 必填，生成签名的随机串
+                        signature: _config.signature, // 必填，签名
+                        jsApiList: [
+                            'runtime.info',
+                            'biz.util.openLink',
+                            'biz.navigation.setLeft',
+                            'biz.navigation.setTitle',
+                            'biz.navigation.setRight',
+                            'device.notification.confirm',
+                            'device.notification.alert',
+                            'biz.util.share',
+                            'ui.webViewBounce',
+                            'ui.webViewBounce.disable',
+                            'biz.contact.choose',
+                            'biz.util.uploadImage',
+                            'biz.util.previewImage',
+                            'biz.contact.departmentsPicker',
+                            'biz.util.uploadAttachment',
+                            'biz.navigation.setMenu',
+                            'biz.util.scanCard',
+                            'biz.contact.externalComplexPicker',
+                            // 'service.request.httpOverLwp'
+                        ] // 必填，需要使用的jsapi列表
+                    });
+                    dd.ready(function(){
+                        console.log('success')
+                    });
+
+                    dd.error(function(error){
+                       console.log(error)
+                    });
+                }
+            }
+        }</script><link href=/res/css/app.68b23d61d9cfebadca92d92366a0d65a.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/res/js/manifest.441b8e9faa295c394762.js></script><script type=text/javascript src=/res/js/vendor.f058724f63fcc366b632.js></script><script type=text/javascript src=/res/js/app.85b526d0838d16afbaad.js></script></body></html>

@@ -1,0 +1,800 @@
+html {
+	font-size: 14px;
+}
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Microsoft YaHei",arial, "lucida console", sans-serif;
+}
+p,h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	font-weight: normal;
+}
+$mainColor: #3891f9;
+$menuColor: #636363;
+$baiColor: #ffffff;
+$bgColor: #f3f6f9;
+$fontSize: 0.7rem;
+$iptBorder: 1px solid #d1dbe5;
+$borderStyle: 1px solid #bfcbd9;
+$qianStyle: 1px solid #dbe2ee;
+$lanBorder: 1px solid #3891f9;
+$hColor: #272c31;
+$redColor: #f20000;
+$danlanColor: #f5f8fd;
+$bgOpcity: rgba(0,0,0,0.3);
+$chengColor: #fe5206;
+$huangColor: #fc8e00;
+$lvColor: #00db62;
+$menuBg: #212b48;
+$huiColor: #5a6879;
+$lanBg: #e9f2fa;
+$titleBg: #f5f9ff;
+$wordColor: #1f2a44;
+
+
+.yichangModal { z-index: 8; }// 异常处理
+.xjkhModal { z-index: 8; }// 新建客户
+.bchkxxModal { z-index: 8; } // 补充回款信息
+.zdtjModal {  z-index: 8;  }  // 自动添加回款计划
+.sdtjModal {  z-index: 8;  }  // 手动添加回款计划
+.xjhkModal {  z-index: 8;  }  // 新建回款
+.htbqModal { z-index: 9; } //合同标签
+.xxtxModal { z-index: 10; } //消息提醒
+.tjcpModal {  z-index: 10; }  // 添加产品信息
+.xzkhModal { z-index: 11; } //选择客户
+.bjhtModal { z-index: 12; } //编辑合同
+.bjkhModal { z-index: 12; } //编辑客户
+.tjhkjhModal { z-index: 14; } //添加回款计划
+.htbqModal { z-index: 14; } //合同标签
+.xzfzrModal { z-index: 15; } //选择负责人
+.rlhkxxModal { z-index: 19; } // 认领回款信息
+.hxModal   {  z-index: 21; }  // 核销
+.bctkxxModal { z-index: 20; } // 补充退款信息
+.xzhtModal { z-index: 22; }  // 选择合同
+.bjhkjhModal { z-index: 22;; }// 编辑回款计划
+.yiyiModal { z-index: 23; } // 我有异议
+.bgsqModal { z-index: 19; } //变更申请
+.hkjhModal { z-index: 26; } //回款计划
+.bghtModal { z-index: 20; } //变更合同
+.fgsModal { z-index: 28; } //发给谁
+
+body {
+	background: $bgColor;
+	min-width: 850px;
+	overflow: auto;
+}
+a {
+	-webkit-tap-highlight-color: transparent;
+		  -webkit-touch-callout: none;
+			-webkit-user-select: none;
+}
+input,textarea,select,option {
+	outline: medium;
+	background: $baiColor;
+	border-radius: 1px;
+}
+button {
+	outline: medium;
+}
+textarea {
+	resize : none;
+}
+li {
+	list-style: none;
+}
+body {
+	background: #e9eef5;
+}
+.container {
+	padding: 0 10px;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+	float: left;
+	box-sizing:border-box;
+}
+.col-xs-12 {
+	width: 100%;
+}
+.col-xs-11 {
+	width: 91.66666667%;
+}
+.col-xs-10 {
+	width: 83.33333333%;
+}
+.col-xs-9 {
+	width: 75%;
+}
+.col-xs-8 {
+	width: 66.66666667%;
+}
+.col-xs-7 {
+	width: 58.33333333%;
+}
+.col-xs-6 {
+	width: 50%;
+}
+.col-xs-5 {
+	width: 41.66666667%;
+}
+.col-xs-4 {
+	width: 33.33333333%;
+}
+.col-xs-3 {
+	width: 25%;
+}
+.col-xs-2 {
+	width: 16.66666667%;
+}
+.col-xs-1 {
+	width: 8.33333333%;
+}
+.col-xs-offset-1 {
+	margin-left: 8.33333333%;
+}
+.text-right {
+	text-align: right;
+}
+.wrap {
+	margin: 120px 15px 0 165px;
+}
+// 表格部分样式
+.main-content {
+	box-shadow: 0 0px 6px rgba(0,0,0,0.35);
+	.header {
+		background: $baiColor;
+		overflow: hidden;
+		border-bottom: 3px solid $mainColor;
+		.row{
+			padding: 15px 0;
+			overflow: hidden;
+			.left {
+				float: left;
+				margin-left: 20px;
+				.xinjian {
+					width: 66px;
+					height: 32px;
+					background: $mainColor;
+					border: 0;
+					color: $baiColor;
+					border-radius: 2px;
+					cursor: pointer;
+				}
+				.port {
+					cursor: pointer;
+					margin: 0 10px 0 20px;
+					font-size: 15px;
+					color: #555555;
+					i {
+						margin-right: 3px;
+						color: $mainColor;
+					}
+				}
+				.dele {
+					i {
+						color: $redColor;
+					}
+				}
+
+			}
+			.right{
+				margin-right: 50px;
+				float: right;
+				.screen {
+					margin-right: 10px;
+					display: inline-block;
+					line-height: 32px;
+					color: #063e6f;
+					cursor: pointer;
+				}
+				.searchInput {
+					float: right;
+					width: 300px;
+					position: relative;
+					input {
+						padding: 0 10px;
+						width: 100%;
+						height: 32px;
+						border-radius: 5px;
+						border: 1px solid #b4c3d8;
+						background: #f5f9ff;
+					}
+					i {
+						position: absolute;
+						top: 7px;
+						right: 5px;
+						font-size: 16px;
+						color: #d7dee5;
+					}
+				}
+
+			}
+		}
+		.condition {
+			padding: 15px;
+			border-top: 1px solid #d7dee5;
+			.col {
+				margin-right: 80px;
+				float: left;
+				color: #000000;
+				select {
+					width: 110px;
+					color: #081826;
+					border-radius: 3px;
+					border: $iptBorder;
+				}
+			}
+		}
+	}
+	.middle {
+		width: 100%;
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			thead {
+				background: #f5f8fd;
+				border-bottom: 1px solid #dfe4eb;
+				th {
+					font-size: 14px;
+					padding: 10px;
+					text-align: center;
+					font-weight: normal;
+					color: #000000;
+					border-right: 1px solid #dfe4eb;
+					white-space: nowrap;
+					input {
+							width: 15px;
+							height: 15px;
+						}
+					i {
+						color: #b4c3d8;
+						font-size: 22px;
+						vertical-align: middle;
+						cursor: default;
+					}
+				}
+				th:last-child {
+					border: 0;
+				}
+			}
+			tbody {
+				background: $baiColor;
+				tr {
+					td {
+						font-size: 13px;
+						padding: 10px 10px;
+						border: none;
+						white-space: nowrap;
+						cursor: default;
+					}
+					td:first-child {
+						width: 45px;
+						text-align: center;
+						input {
+							width: 15px;
+							height: 15px;
+						}
+					}
+					td:nth-child(2){
+						white-space: normal;
+						// min-width: 180px;
+						border-right: 1px solid #dfe4eb;
+					}
+				}
+				tr:nth-child(2n) {
+					background: #f9f9f9;
+				}
+				tr:hover {
+					background: #e7eef9;
+				}
+			}
+		}
+	}
+	.line {
+		padding-bottom: 10px;
+		background: #e5e8eb;
+	}
+	.bottom {
+		padding: 20px 30px 20px 50px;
+		background: $baiColor;
+		overflow: hidden;
+		.left {
+			width: 55%;
+			float: left;
+			line-height: 23px;
+			white-space: normal;
+			color: #333;
+			p {
+				display: inline-block;
+				margin-right: 10px;
+			}
+			span {
+				color: $mainColor;
+			}
+		}
+		.right {
+			float: right;
+			line-height: 23px;
+			p {
+				float: left;
+				margin: 0 8px;
+				input {
+					margin: 0 8px;
+					width: 23px;
+					height: 23px;
+					border: $iptBorder;
+					text-align: center;
+				}
+			}
+			ul {
+				float: left;
+				li {
+					float: left;
+					width: 23px;
+					height: 23px;
+					text-align: center;
+					line-height: 23px;
+					border: $iptBorder;
+					border-right: 0;
+					display: inline-block;
+					color: #153a5b;
+					font-size: 12px;
+					cursor: pointer;
+					i {
+						font-size: 18px;
+					}
+				}
+				li:first-child {
+					border-top-left-radius: 3px;
+					border-bottom-left-radius: 3px;
+				}
+				li:last-child {
+					border-right: $iptBorder;
+					border-top-right-radius: 3px;
+					border-bottom-right-radius: 3px;
+				}
+				.active {
+					color: $baiColor;
+					background: $mainColor;
+					border: $lanBorder;
+				}
+			}
+		}
+	}
+}
+// 右边弹框样式
+.fade {
+	position: fixed;
+	right: 0;
+	top: 70px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.35);
+	z-index: 8;
+	.madol {
+		position: absolute;
+		right: 0;
+		width: 750px;
+		height: 100%;
+		background: $baiColor;
+		border-radius: 4px;
+		
+		.top {
+			background: $danlanColor;
+			border-bottom: $qianStyle;
+			overflow: hidden;
+			h3 {
+				margin-left: 30px;
+				display: inline-block;
+				float: left;
+				font-size: 18px;
+				font-weight: bold;
+				color: $mainColor;
+				line-height: 40px;
+				span {
+					margin-left: 5px;
+					width: 74px;
+					height: 18px;
+					line-height: 18px;
+					text-align: center;
+					display: inline-block;
+					border: 1px solid $huiColor;
+					border-radius: 3px;
+					color: $huiColor;
+					font-size: 12px;
+					cursor: pointer;
+					i {
+						font-size: 12px;
+					}
+
+				}
+			}
+			.right {
+				float: right;
+				.bradge {
+					width: 80px;
+					border-left: $qianStyle;
+					line-height: 40px;
+					float: left;
+					text-align: center;
+					color: #273140;
+					font-size: 14px;
+					cursor: pointer;
+					i {
+						margin-right: 3px;
+						font-size: 16px;
+						color: $mainColor;
+					}
+				}
+			}
+		}
+		.middle {
+			border-bottom: $qianStyle;
+			overflow: hidden;
+			padding: 20px 34px;
+			div {
+				padding-right: 10px;
+				float: left;
+				span {
+					display: block;
+					line-height: 24px;
+				}
+				span:first-child {
+					color: #5a6879;
+					font-size: 13px;
+				}
+				span:nth-child(2) {
+					color: #1f2a44;
+					font-size: 15px;
+				}
+			}
+		}
+		.main {
+			overflow: auto;
+			border-top: 10px solid #eaeef5;
+			.tabSelect {
+				border-bottom: $qianStyle;
+				height: 40px;
+				line-height: 40px;
+				div {
+					display: inline-block;
+					padding: 0 20px;
+					cursor: pointer;
+				}
+				.active {
+					color: $mainColor;
+					border-bottom: 2px solid #3891f9;
+				}
+			}
+			.tabCont {
+				overflow: auto;
+				padding-bottom: 30px;
+				height: 400px;
+			}
+		}
+	}
+}
+
+// 中间弹框样式
+.centerModal {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.35);
+	z-index: 9;
+	.modalInner {
+		width: 650px;
+		margin: 80px auto 0;
+
+		border-radius: 2px;
+		overflow: auto;
+		background: $baiColor;
+		.header {
+			width: 100%;
+			height: 40px;
+			background: #354261;
+			position: relative;
+			color: $baiColor;
+			h3 {
+				
+				font-size: 16px;
+				text-align: center;
+				line-height: 40px;
+				letter-spacing: 2px;
+			}
+			i {
+				position: absolute;
+				top: 10px;
+				right: 15px;
+				font-size: 22px;
+				cursor: pointer;
+			}
+		}
+		.body {
+			// width: 100%;
+			max-height: 470px;
+			overflow: auto;
+			background: #f8fbfe;
+			.newCustomer,.newContract,.biangeng {
+				padding: 10px 0 20px;
+				.row {
+					margin-top: 10px;
+					// overflow: hidden;
+					display: flex;
+					.col-xs-3 {
+						padding-right: 15px;
+						text-align: right;
+						color: $huiColor;
+						line-height: 32px;
+						span {
+							margin-right: 10px;
+							color: $redColor;
+						}
+					}
+					.col-xs-9,.col-xs-7,.col-xs-6 {
+						padding-left: 15px;
+						// padding-right: 10px;
+						position: relative;
+						color: #1f2a44;
+						input,select,textarea {
+							padding: 0 36px 0 10px;
+							width: 84%;
+							height: 30px;
+							color: #121827;
+							border: $borderStyle;
+							border-radius: 3px;
+						}
+						select {
+							width: 94%;
+							option {
+								line-height: 30px;
+							}
+						}
+						.choose {
+							position: absolute;
+							top: 7px;
+							right: 34px;
+							font-size: 13px;
+							color: $mainColor;
+							cursor: pointer;
+						}
+						.dj {
+							position: absolute;
+							top: 7px;
+							right: 30px;
+							font-size: 16px;
+							cursor: pointer;
+							color: $huiColor;
+						}
+						textarea {
+							height: 50px;
+						}
+					}
+					.col-xs-2 {
+						line-height: 32px;
+						span {
+							font-size: 14px;
+							cursor: pointer;
+							color: $huiColor;
+							i {
+								font-size: 14px;
+							}
+						}
+						span:hover {
+							color: $mainColor;
+						}
+					}
+					.bizhong {
+						float: left;
+						select {
+							padding: 0 10px;
+							margin-left: 22px;
+							width: 110px;
+							height: 30px;
+							border: $borderStyle;
+							border-radius: 3px;
+						}
+					}
+					.file {
+						float: left;
+						width: 75%;
+						.upload {
+							width: 100%;
+							height: 32px;
+							position: relative;
+							input[type="file"] {
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 89%;
+								border: 1px dashed #dbe2ee;
+								opacity: 0;
+							}
+							p {
+								
+								width: 94%;
+								border: 1px dashed #dbe2ee;
+								height: 30px;
+								text-align: center;
+								line-height: 32px;
+								color: $huiColor;
+							}
+						}
+
+					}
+					table {
+						margin-bottom: 8px;
+						width: 94%;
+						border: $borderStyle;
+						border-collapse:collapse;
+						thead {
+							background: #eef1f6;
+							tr {
+								th{
+									white-space: nowrap;
+									font-weight: normal;
+									text-align: center;
+									border: $borderStyle;
+									padding: 6px;
+								}
+							}
+						}
+						tbody {
+							tr{
+								td {
+									text-align: center;
+									border: $borderStyle;
+									padding: 6px 12px;
+									i {
+										font-size: 16px;
+										cursor: pointer;
+									}
+									.yulan {
+										font-size: 13px;
+										color: $huiColor;
+									}
+									.xiazai {
+										font-size: 14px;
+										color: $mainColor;
+									}
+									.dele {
+										font-size: 14px;
+										color: $redColor;
+									}
+								}
+							}
+						}
+					}
+				}
+				.title {
+					margin-top: 16px;
+					border-top: $qianStyle;
+					border-bottom: $qianStyle;
+					padding: 6px 0 6px 72px;
+					background: $baiColor;
+					h4 {
+						font-size: 15px;
+						height: 15px;
+						line-height: 16px;
+						padding-left: 8px;
+						border-left: 3px solid $mainColor;
+					}
+				}
+			}
+		}
+		.footer {
+			background: $lanBg;
+			height: 50px;
+			border-top: $qianStyle;
+			text-align: right;
+			padding-right: 76px;
+			span {
+				margin-top: 10px;
+				display: inline-block;
+				line-height: 32px;
+			}
+			.btn {
+				display: inline-block;
+				margin-top: 10px;
+				margin-left: 20px;
+				width: 66px;
+				height: 30px;
+				border-radius: 3px;
+			}
+			.cancel {
+				
+				border: $borderStyle;
+				color: $huiColor;
+				background: $baiColor;
+			}
+			.confirm {
+				color: $baiColor;
+				background: $mainColor;
+				border: $lanBorder;
+			}
+		}
+
+	}
+}
+
+
+@media only screen and (min-width:1000px){
+	.fade {
+		.madol {
+			.main {
+				.tabCont {
+					height: 340px;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width:1100px){
+	.fade {
+		.madol {
+			.main {
+				.tabCont {
+					height: 360px;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width:1200px){
+	.fade {
+		.madol {
+			.main {
+				.tabCont {
+					height: 380px;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width:1300px){
+	.fade {
+		.madol {
+			.main {
+				.tabCont {
+					height: 340px;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width:1400px){
+	.fade {
+		.madol {
+			.main {
+				.tabCont {
+					height: 420px;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width:1500px){
+	.fade {
+		.madol {
+			.main {
+				.tabCont {
+					height: 450px;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width:1600px){
+	.fade {
+		.madol {
+			.main {
+				.tabCont {
+					height: 480px;
+				}
+			}
+		}
+	}
+}
+	
